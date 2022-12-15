@@ -42,6 +42,7 @@ public class Drive : MonoBehaviour
    void Update(){
     if(Input.GetKeyDown(KeyCode.Space)){
            anim.SetBool("isJumping", true);
+           Debug.Log("Space key is pressed.");
        }else if(Input.GetKeyUp(KeyCode.Space)){
            anim.SetBool("isJumping", false);
        }
@@ -50,6 +51,7 @@ public class Drive : MonoBehaviour
        }else if(Input.GetKeyUp(KeyCode.LeftShift)){
            anim.SetBool("isRunning", false);
        }
+       
    }
 }
 
