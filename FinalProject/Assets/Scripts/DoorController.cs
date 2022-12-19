@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorController : MonoBehaviour
-{
-    Animator doorAnimator;
+    public class DoorController : MonoBehaviour
+    {
+        Animator doorAnimator;
    
     private void OnTriggerStay(Collider other) {
          if(Input.GetKey(KeyCode.E)){
