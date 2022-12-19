@@ -12,6 +12,7 @@ public class PanelComputer : MonoBehaviour
     // public GameObject ePrompt;
     public GameObject panelComputer;
 
+
     private void OnTriggerEnter(Collider other)
     {
         inTrigger = true;
@@ -132,4 +133,7 @@ public class PanelComputer : MonoBehaviour
             }
         }
     }
+
+
+
 }
