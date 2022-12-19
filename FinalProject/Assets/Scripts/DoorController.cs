@@ -1,24 +1,24 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-    public class DoorController : MonoBehaviour
+public class DoorController : MonoBehaviour
+{
+    private void OnTriggerStay(Collider other)
     {
-        Animator doorAnimator;
-   
-    private void OnTriggerStay(Collider other) {
-         if(Input.GetKey(KeyCode.E)){
-            doorAnimator.SetBool("DoorOpen", true);
+        if(other.tag == "Door")
+        {
+            Animator anim = other.GetComponentInChildren<Animator>();
+            if(Input.GetKeyDown(KeyCode.E))
+                anim.SetTrigger("OpenClose"); 
         }
     }
-    private void OnTriggerExit(Collider other) {
-        doorAnimator.SetBool("DoorOpen", false);
 
-    }
-    
-    private void Awake() {
-        doorAnimator = this.transform.parent.GetComponent<Animator>();    
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Door")
+        {
+
+        }
     }
 }
-
-
