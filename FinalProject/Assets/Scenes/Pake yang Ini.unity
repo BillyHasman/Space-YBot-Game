@@ -11409,7 +11409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OxygenBar: {fileID: 70951889}
-  gameTime: 60
+  Oxygen: 60
 --- !u!1001 &1237191012
 PrefabInstance:
   m_ObjectHideFlags: 0
