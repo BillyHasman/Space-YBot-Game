@@ -8,6 +8,7 @@ TagManager:
   - key
   - Hatch
   - Ball
+  - OxyButton
   layers:
   - Default
   - TransparentFX
