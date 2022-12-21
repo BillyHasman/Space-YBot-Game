@@ -4,22 +4,29 @@ using UnityEngine;
 
 public class Drive : MonoBehaviour
 {
-    public float speed = 5.0f;
+    public static GameObject controlledBy;
+    public float speed = 2.0f;
     public float rotationSpeed = 100.0f;
     Animator anim;
 
     void Start()
     {
-        
+        anim = this.GetComponent<Animator>();
+
     }
 
     void Awake()
     {
-        anim = this.GetComponent<Animator>();
+        // anim = this.GetComponent<Animator>();
     }
 
     void FixedUpdate()
     {
+       
+    }
+
+   void Update(){
+     if(controlledBy != null) return;
         float translation = Input.GetAxis("Vertical") * speed;
         float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
         translation *= Time.fixedDeltaTime;
@@ -37,9 +44,6 @@ public class Drive : MonoBehaviour
             anim.SetFloat("characterSpeed", 0);
         }
 
-    }
-
-   void Update(){
     if(Input.GetKeyDown(KeyCode.Space)){
            anim.SetBool("isJumping", true);
            Debug.Log("Space key is pressed.");
