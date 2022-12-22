@@ -22,11 +22,12 @@ public class Drive : MonoBehaviour
 
     void FixedUpdate()
     {
-       
+
     }
 
-   void Update(){
-     if(controlledBy != null) return;
+    void Update()
+    {
+        //  if(controlledBy != null) return;
         float translation = Input.GetAxis("Vertical") * speed;
         float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
         translation *= Time.fixedDeltaTime;
@@ -44,18 +45,24 @@ public class Drive : MonoBehaviour
             anim.SetFloat("characterSpeed", 0);
         }
 
-    if(Input.GetKeyDown(KeyCode.Space)){
-           anim.SetBool("isJumping", true);
-           Debug.Log("Space key is pressed.");
-       }else if(Input.GetKeyUp(KeyCode.Space)){
-           anim.SetBool("isJumping", false);
-       }
-       if(Input.GetKeyDown(KeyCode.LeftShift)){
-           anim.SetBool("isRunning", true);
-       }else if(Input.GetKeyUp(KeyCode.LeftShift)){
-           anim.SetBool("isRunning", false);
-       }
-       
-   }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.SetBool("isJumping", true);
+            Debug.Log("Space key is pressed.");
+        }
+        else if (Input.GetKeyUp(KeyCode.Space))
+        {
+            anim.SetBool("isJumping", false);
+        }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            anim.SetBool("isRunning", true);
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            anim.SetBool("isRunning", false);
+        }
+
+    }
 }
 

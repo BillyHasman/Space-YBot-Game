@@ -9,6 +9,7 @@ TagManager:
   - Hatch
   - Ball
   - OxyButton
+  - GreenDoor
   layers:
   - Default
   - TransparentFX
