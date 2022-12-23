@@ -5,7 +5,7 @@ using UnityEngine;
 public class Sit : MonoBehaviour
 {
    
-    public GameObject character;
+   public GameObject character;
     public GameObject anchor;
     bool isWalkingTowards = false;
     bool sittingOn = false;
@@ -25,7 +25,7 @@ public class Sit : MonoBehaviour
 
     void OnMouseDown() {
         if(!sittingOn){
-            anim.SetBool("isWalking", true);
+            anim.SetBool("isWalkingtoSit", true);
             anim.SetFloat("characterSpeed", 1.0f);
             isWalkingTowards = true;
             Drive.controlledBy = this.gameObject;
@@ -49,9 +49,9 @@ public class Sit : MonoBehaviour
         rot,
         0.05f);
 
-    if (Vector3.Distance(character.transform.position, anchor.transform.position) < 0.8f){
+    if (Vector3.Distance(character.transform.position, anchor.transform.position) < 0.4f){
         anim.SetBool("isSitting", true);
-        anim.SetBool("isWalking", false);
+        anim.SetBool("isWalkingtoSit", false);
         character.transform.rotation = anchor.transform.rotation;
         isWalkingTowards = false;
         sittingOn = true;
