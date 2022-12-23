@@ -10,6 +10,7 @@ TagManager:
   - Ball
   - OxyButton
   - GreenDoor
+  - Generator
   layers:
   - Default
   - TransparentFX
