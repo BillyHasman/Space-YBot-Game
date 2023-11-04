@@ -18,4 +18,5 @@ After cloning, do the following:
 4. Import Assets. Unity might take a bit to import assets and set up the project files for the first time.
 5. Open the Main Scene. Go to the 'Scenes' folder within the Project window in Unity and double-click the main scene to open it.
 
+## Encouragement for the Journey Ahead
 > “Every great journey begins with a single step. Your journey into Unity development starts here, and every challenge is an opportunity to learn and grow. Embrace the process, and don't be afraid to make mistakes. After all, the best way to learn game development is to simply start making games. So go ahead, press play, and see where this adventure takes you. Happy coding!”
